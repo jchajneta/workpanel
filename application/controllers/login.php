@@ -17,13 +17,13 @@ class Login extends CI_Controller {
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-      echo "Odebrano dane POST"; //linijka testowa
+      //echo "Odebrano dane POST"; //linijka testowa
       echo $this->input->post("password");
 
     //pobierz wartości POST
     $username = $this->input->post("p_username");
     $password = $this->input->post("p_password");
-    echo("<br>" . $username . "<br>" . $password); //linijka testowa
+    //echo("<br>" . $username . "<br>" . $password); //linijka testowa
 
     //walidowanie formularza
     //reguły walidacji
@@ -34,7 +34,8 @@ class Login extends CI_Controller {
 
     if ($this->form_validation->run() == FALSE) {
       //walidacja nieudana
-      $this->load->view('login_view');
+      $_POST = array();
+      $this->load->view('loginform');
 
     } else {
       //walidacja udana

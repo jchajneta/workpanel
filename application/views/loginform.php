@@ -22,18 +22,19 @@
 		</div>
 		<div class="login-box animated fadeInUp">
 			<div class="box-header">
-				<h2>Log In</h2>
+				<h2>Logowanie</h2>
 			</div>
+			<?php echo validation_errors(); ?>
       <? echo form_open('login'); ?>
-			<label for="username">Username</label>
+			<label for="username">Użytkownik</label>
 			<br/>
 			<input type="text" id="p_username" name="p_username">
 			<br/>
-			<label for="password">Password</label>
+			<label for="password">Hasło</label>
 			<br/>
 			<input type="password" id="p_password" name="p_password">
 			<br/>
-			<button type="submit">Sign In</button>
+			<button type="submit">Zaloguj</button>
 			<br/>
     </form>
 			<a href="#"><p class="small">Forgot your password?</p></a>
